@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hoffnungland</groupId>
   <artifactId>kamimeans</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
 	<distributionManagement>
 		<repository>
 			<id>manuelmsperanza.github</id>
@@ -17,14 +16,14 @@
 	<scm>
 		<connection>scm:git:https://github.com/manuelmsperanza/KamiMeans.git</connection>
 		<developerConnection>scm:git:git@github.com:manuelmsperanza/KamiMeans.git</developerConnection>     
-		<tag>saxonxpathutils-0.0.1</tag>
+		<tag>kamimeans-0.0.1</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/manuelmsperanza/KamiMeans/issues</url>
 	</issueManagement>
 	<prerequisites>
-		<maven>3.2.5</maven>
+		<maven>3.1.0</maven>
 	</prerequisites>
   <name>KamiMeans</name>
 
