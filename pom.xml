@@ -97,8 +97,8 @@
 						<archive>
 							<manifest>
 								<addClasspath>true</addClasspath>
-								<classpathPrefix>JTunneling_lib/</classpathPrefix>
-								<mainClass>com.hoffnungland.jTunneling.App</mainClass>
+								<classpathPrefix>KamiMeanslib/</classpathPrefix>
+								<mainClass>com.hoffnungland.kamiMeans.App</mainClass>
 							</manifest>
 						</archive>
 					</configuration>
@@ -145,7 +145,7 @@
 					<finalName>${project.name}</finalName>
 					<archive>
 						<manifest>
-							<mainClass>com.hoffnungland.jTunneling.App</mainClass>
+							<mainClass>com.hoffnungland.kamiMeans.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
