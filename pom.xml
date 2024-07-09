@@ -5,7 +5,7 @@
 
   <groupId>com.hoffnungland</groupId>
   <artifactId>kamimeans</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.1-SNAPSHOT</version>
 	<distributionManagement>
 		<repository>
 			<id>manuelmsperanza.github</id>
