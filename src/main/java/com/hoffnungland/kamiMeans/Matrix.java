@@ -101,7 +101,7 @@ public class Matrix {
 			
 			String[] headerListCopy = this.convertListToStringArray(this.headerList);
 			String[] indexListCopy = this.convertListToStringArray(this.indexList);
-					
+				
 			for (DoublePoint point : this.clusterResults.get(clusterIdx).getPoints()) {
 				
 				double[] dPoints = point.getPoint();
@@ -109,17 +109,21 @@ public class Matrix {
 				for (int dPointsIdx = 0; dPointsIdx < dPoints.length; dPointsIdx++) {
 					if(dPoints[dPointsIdx] == 0.0) {
 						headerListCopy[dPointsIdx] = null; //Reset the header when the value does not belong to the cluster
-					} else {
-						nonClusteredHeaderList[dPointsIdx] = null; //Reset the header for non clustered values
+						/*} else {
+						nonClusteredHeaderList[dPointsIdx] = null;*/ //Reset the header for non clustered values
+						
 					}
 				}
 				
 			}
 			logger.info("Cluster " + clusterIdx + ":");
 			logger.info("Header");
+			boolean skipHeader = true; 
 			for (int headerIdx = 0; headerIdx < headerListCopy.length; headerIdx++) {
 				if(headerListCopy[headerIdx] != null) {
+					skipHeader = false;
 					logger.info(headerListCopy[headerIdx]);
+					nonClusteredHeaderList[headerIdx] = null; //Reset the header for non clustered values
 					String[] headerClusterRecord = {Integer.toString(clusterIdx), headerListCopy[headerIdx]};
 					csvPrinterHeaderCluster.printRecord(headerClusterRecord);
 					
@@ -128,23 +132,27 @@ public class Matrix {
 							double pointValue = this.points.get(pointIdx).getPoint()[headerIdx];
 							if(pointValue == 0) {
 								indexListCopy[pointIdx] = null;
-							} else {
-								nonClusteredIndexList[pointIdx] = null;
+							/*} else {
+								nonClusteredIndexList[pointIdx] = null;*/
 							}
 						}
 					}
 				}
 			}
-			logger.info("Index");
-			for(int pointIdx = 0; pointIdx < indexListCopy.length; pointIdx++) {
-				if(indexListCopy[pointIdx] != null) {
-					logger.info(indexListCopy[pointIdx]);
-					
-					String[] indexClusterRecord = {Integer.toString(clusterIdx), indexListCopy[pointIdx]};
-					csvPrinterIndexCluster.printRecord(indexClusterRecord);
+			if(skipHeader) {
+				logger.warn("Skip cluster " + clusterIdx + ":");
+			} else {
+				logger.info("Index");
+				for(int pointIdx = 0; pointIdx < indexListCopy.length; pointIdx++) {
+					if(indexListCopy[pointIdx] != null) {
+						logger.info(indexListCopy[pointIdx]);
+						nonClusteredIndexList[pointIdx] = null;
+						
+						String[] indexClusterRecord = {Integer.toString(clusterIdx), indexListCopy[pointIdx]};
+						csvPrinterIndexCluster.printRecord(indexClusterRecord);
+					}
 				}
 			}
-			
 		}
 		
 		logger.info("Non clustered header:");

@@ -33,7 +33,7 @@ public class App {
 		Matrix kMatrix = new Matrix();
 		try {
 			kMatrix.loadData(filePath);
-			kMatrix.getClusters(10, -1);
+			kMatrix.getClusters(50, -1);
 			kMatrix.analyzeClusters();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
