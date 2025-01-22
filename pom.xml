@@ -5,7 +5,7 @@
 
   <groupId>com.hoffnungland</groupId>
   <artifactId>kamimeans</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5-SNAPSHOT</version>
 	<distributionManagement>
 		<repository>
 			<id>manuelmsperanza.github</id>
@@ -16,7 +16,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/manuelmsperanza/KamiMeans.git</connection>
 		<developerConnection>scm:git:git@github.com:manuelmsperanza/KamiMeans.git</developerConnection>     
-		<tag>kamimeans-0.0.4</tag>
+		<tag>kamimeans-0.0.3</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
