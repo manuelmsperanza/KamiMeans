@@ -4,16 +4,12 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.io.Reader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import org.apache.commons.csv.QuoteMode;
-import org.apache.commons.math3.ml.clustering.CentroidCluster;
 import org.apache.commons.math3.ml.clustering.DoublePoint;
-import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
